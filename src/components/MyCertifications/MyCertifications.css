@@ -1,0 +1,37 @@
+.about-certifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.about-certifications h2 {
+  padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.certifications-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cert-card {
+  background: #222;
+  padding: 20px 25px;
+  border-radius: 12px;
+  min-width: 220px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
+}

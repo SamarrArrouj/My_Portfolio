@@ -4,34 +4,70 @@
   align-items: center;
   gap: 30px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .about-certifications h2 {
-  padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .certifications-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;             
+  max-width: 1024px;    
 }
 
 .cert-card {
   background: #222;
   padding: 20px 25px;
   border-radius: 12px;
-  min-width: 220px;
+  width: 250px;           
   text-align: center;
   color: #fff;
   font-weight: 500;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .cert-card:hover {
   transform: translateY(-5px);
   background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
+}
+
+/* Tablette */
+@media screen and (min-width: 768px) {
+  .about-certifications h2 {
+    font-size: 60px;
+  }
+
+  .cert-card {
+    width: 220px;
+    padding: 25px 30px;
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  .about-certifications {
+    margin: 80px auto;
+  }
+
+  .about-certifications h2 {
+    font-size: 80px;
+  }
+
+  .certifications-list {
+    gap: 50px;  
+  }
+
+  .cert-card {
+    width: 270px;
+    padding: 30px 35px;
+    font-size: 20px;
+  }
 }

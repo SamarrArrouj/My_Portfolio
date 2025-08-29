@@ -27,7 +27,6 @@ const About = () => {
                 <h1>About Me</h1>
             </div>
 
-            {/* Introduction: Image + Texte côte à côte */}
             <div className="about-intro">
                 <div className="about-left">
                     <img src={samar} alt="Samar" />
@@ -44,7 +43,7 @@ const About = () => {
                 </div>
             </div>
 
-            {/* Skills sous l'image et texte */}
+            
             <div className="about-skills">
                 <h2>Skills</h2>
 

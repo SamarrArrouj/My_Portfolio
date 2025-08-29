@@ -1,52 +1,116 @@
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 170px;
+  position: relative;
+}
+
+.nav-logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
 }
 
 .nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    font-size: 20px;
-}
-
-.nav-connect {
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 0.63%, #B923E1 102.06%);
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.nav-connect:hover {
-    transform: scale(1.05);
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
 
 .nav-menu li {
-    cursor: pointer;
-    font-size: 25px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .anchor-link {
-    text-decoration: none;
-    color: white;
-    position: relative;
-    padding-bottom: 5px;
-    transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  padding-bottom: 5px;
+  transition: 0.3s;
 }
 
-/* Effet de soulignement pour l'élément actif */
 .anchor-link.active::after {
-    content: '';
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(267deg, #DA7C25 0.63%, #B923E1 102.06%);
+  border-radius: 2px;
+}
+
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #DA7C25 0.63%, #B923E1 102.06%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+
+.burger {
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile / Tablet */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+  .nav-menu {
+    gap: 30px;
+  }
+  .nav-connect {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
-    height: 3px;
-    background: linear-gradient(267deg, #DA7C25 0.63%, #B923E1 102.06%);
-    border-radius: 2px;
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-connect {
+    display: none; 
+  }
+
+  .nav-connect-mobile {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
 }

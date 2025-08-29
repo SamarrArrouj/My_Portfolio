@@ -96,4 +96,47 @@
   10% { opacity: 1; transform: translateY(0); }
   90% { opacity: 1; transform: translateY(0); }
   100% { opacity: 0; transform: translateY(-10px); }
+
+}
+@media screen and (min-width: 768px) {
+    .footer {
+        margin: 60px 60px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        margin: 80px 170px;
+    }
+
+    .footer-top-left p {
+        font-size: 20px;
+        max-width: 400px;
+    }
+
+    .footer-bottom {
+        font-size: 18px;
+    }
+
+    .footer-bottom-right {
+        gap: 35px;
+    }
+
+    .footer-email-input {
+        padding: 15px 25px;
+    }
+
+    .footer-email-input input {
+        font-size: 18px;
+    }
+
+    .footer-email-input button {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+
+    .footer-subscribe {
+        font-size: 18px;
+        padding: 20px 50px;
+    }
 }
